@@ -8,7 +8,7 @@ public abstract class CalculateComposite implements MathExpression, Observer{
     protected int lastObservedResult;
     
     public void add(MathExpression number) {
-        Children.add(number);
+        numbers.add(number);
     }
     public void update() {
         lastObservedResult = getResult();
