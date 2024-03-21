@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class CalculateComposite implements MathExpression, Observer{
+    protected List<MathExpression> numbers = new ArrayList<MathExpression>();
     protected int lastObservedResult;
-    protected List<MathExpression> Children = new ArrayList<MathExpression>();
     
     public void add(MathExpression number) {
         Children.add(number);

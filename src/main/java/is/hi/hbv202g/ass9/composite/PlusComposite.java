@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PlusComposite implements MathExpression{
-    private List<MathExpression> children = new ArrayList<MathExpression>();
+    private List<MathExpression> numbers = new ArrayList<MathExpression>();
     
     public void add(MathExpression number) {
-        children.add(number);
+        numbers.add(number);
     }
     
     public int getResult() {
         int result = 0;
-        for (MathExpression child : children) {
-            result += child.getResult();
+        for (MathExpression number : numbers) {
+            result += number.getResult();
         }
         return result;
     }

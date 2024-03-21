@@ -1,16 +1,7 @@
 package is.hi.hbv202g.ass9.compositeObservedTemplateMethod;
 
-import java.util.ArrayList;
-import java.util.List;
+public class MultiplyComposite extends CalculateComposite{
 
-public class MultiplyComposite implements MathExpression, Observer{
-    private List<MathExpression> numbers = new ArrayList<MathExpression>();
-    private int lastObservedResult;
-    
-    public void add(MathExpression number) {
-        numbers.add(number);
-    }
-    
     public int getResult() {
         int result = 1;
         for (MathExpression number : numbers) {
@@ -18,10 +9,5 @@ public class MultiplyComposite implements MathExpression, Observer{
         }
         return result;
     }
-    public void update() {
-        System.out.println(getResult());
-    }
-    public int getLastObserverResult() {
-        return this.lastObservedResult;
-    }
+
 }
