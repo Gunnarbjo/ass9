@@ -5,6 +5,7 @@ import java.util.List;
 
 public class MultiplyComposite implements MathExpression, Observer{
     private List<MathExpression> numbers = new ArrayList<MathExpression>();
+    private int lastObservedResult;
     
     public void add(MathExpression number) {
         numbers.add(number);
@@ -18,6 +19,10 @@ public class MultiplyComposite implements MathExpression, Observer{
         return result;
     }
     public void update() {
-        System.out.println(getResult());
+        lastObservedResult = getResult();
+        System.out.println(lastObservedResult);
+    }
+    public int getLastObserverResult() {
+        return lastObservedResult;
     }
 }

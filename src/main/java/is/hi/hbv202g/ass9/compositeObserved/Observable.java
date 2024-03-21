@@ -1,6 +1,7 @@
 package is.hi.hbv202g.ass9.compositeObserved;
 
 import java.util.List;
+import java.util.ArrayList;
 
 public abstract class Observable {
     private List<Observer> observers;
@@ -17,5 +18,8 @@ public abstract class Observable {
         for (Observer observer : observers) {
             observer.update();
         }
+    }
+    public Observable() {
+        observers = new ArrayList<Observer>();
     }
 }

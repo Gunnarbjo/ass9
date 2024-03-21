@@ -24,6 +24,7 @@ public class PlusComposite implements MathExpression, Observer{
     }
 
     public void update() {
-        System.out.println(getResult());
+        lastObservedResult = getResult();
+        System.out.println(lastObservedResult);
     }
 }
