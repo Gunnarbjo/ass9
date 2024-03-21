@@ -10,11 +10,11 @@ public abstract class Observable {
         observers.add(observer);
     }
     
-    public void removeObserver(Observer observer) {
+    public void detach(Observer observer) {
         observers.remove(observer);
     }
     
-    public void notifyObservers() {
+    public void attach() {
         for (Observer observer : observers) {
             observer.update();
         }

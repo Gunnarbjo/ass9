@@ -6,15 +6,15 @@ import java.util.ArrayList;
 public abstract class Observable {
     private List<Observer> observers;
     
-    public void addObserver(Observer observer) {
+    public void notifyObservers(Observer observer) {
         observers.add(observer);
     }
     
-    public void removeObserver(Observer observer) {
+    public void detach(Observer observer) {
         observers.remove(observer);
     }
     
-    public void notifyObservers() {
+    public void attach() {
         for (Observer observer : observers) {
             observer.update();
         }

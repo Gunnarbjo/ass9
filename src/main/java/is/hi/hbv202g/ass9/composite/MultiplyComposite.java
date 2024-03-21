@@ -9,7 +9,7 @@ public class MultiplyComposite implements MathExpression{
     public void add(MathExpression number) {
         numbers.add(number);
     }
-    
+    @Override
     public int getResult() {
         int result = 1;
         for (MathExpression number : numbers) {

@@ -8,10 +8,10 @@ public class NumberLeaf extends Observable implements MathExpression{
     }
     
     public int getResult() {
-        return number;
+        return this.number;
     }
     public void setValue(int number) {
         this.number = number;
-        notifyObservers();
+        attach();
     }
 }
