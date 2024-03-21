@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public abstract class Observable {
     private List<Observer> observers;
     
-    public void addObserver(Observer observer) {
+    public void attach(Observer observer) {
         observers.add(observer);
     }
     
@@ -14,7 +14,7 @@ public abstract class Observable {
         observers.remove(observer);
     }
     
-    public void attach() {
+    public void notifyObservers() {
         for (Observer observer : observers) {
             observer.update();
         }

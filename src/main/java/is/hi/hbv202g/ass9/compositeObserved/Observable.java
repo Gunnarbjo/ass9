@@ -6,18 +6,18 @@ import java.util.ArrayList;
 public abstract class Observable {
     private List<Observer> observers;
     
-    public void notifyObservers(Observer observer) {
-        observers.add(observer);
+    public void notifyObservers() {
+        for(Observer observer: observers){
+            observer.update();
+        }
     }
     
     public void detach(Observer observer) {
         observers.remove(observer);
     }
     
-    public void attach() {
-        for (Observer observer : observers) {
-            observer.update();
-        }
+    public void attach(Observer observer) {
+        observers.add(observer);
     }
     public Observable() {
         observers = new ArrayList<Observer>();

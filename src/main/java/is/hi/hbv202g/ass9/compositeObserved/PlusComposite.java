@@ -19,7 +19,7 @@ public class PlusComposite implements MathExpression, Observer{
         return result;
     }
 
-    public int getLastObserverResult() {
+    public int getLastObservedResult() {
         return this.lastObservedResult;
     }
 

@@ -22,7 +22,7 @@ public class MultiplyComposite implements MathExpression, Observer{
         lastObservedResult = getResult();
         System.out.println(lastObservedResult);
     }
-    public int getLastObserverResult() {
-        return lastObservedResult;
+    public int getLastObservedResult() {
+        return this.lastObservedResult;
     }
 }

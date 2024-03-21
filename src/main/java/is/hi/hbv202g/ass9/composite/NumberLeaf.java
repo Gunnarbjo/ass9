@@ -8,6 +8,6 @@ public class NumberLeaf implements MathExpression{
     }
     
     public int getResult() {
-        return number;
+        return this.number;
     }
 }
